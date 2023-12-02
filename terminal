@@ -1,0 +1,27 @@
+
+import sys
+import os
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')def print_slow(t, s=0.03):
+    for y in t:
+        sys.stdout.write(y)
+        sys.stdout.flush()
+        time.sleep(s)
+    print('')
+
+
+def title(t):
+    col, lin = os.get_terminal_size()
+    print('\n' + '=' * (col + 30) + '\n' +
+          ' ' * int((col - len(t) - 31) / 4) +
+          'DATE : ' + datetime.datetime.now().strftime("%d-%m-%y") +
+          ' ' * int((col - len(t) - 31) / 4) +
+          '# ' + t + ' #' +
+          ' ' * int((col - len(t) - 31) / 4) +
+          'TIME - ' + datetime.datetime.now().strftime("%H:%M") +
+          ' ' * int((col - len(t) - 31) / 4) +
+          '\n' + '=' * (col + 30) + '\n')
+ef heading(t):
+    col, lin = os.get_terminal_size()
+    print('-' * int((col - len(t) - 4) / 2) + '\ ' + t + ' /' \
+          + '-' * (int((col - len(t) - 4) / 2) + 30) + '\n')
