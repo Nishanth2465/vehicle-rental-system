@@ -1,0 +1,33 @@
+drop database if exists CAR;
+create database CAR;
+use CAR;
+
+create table cars
+(
+Car_no int(4),
+Car_class char(10),
+Model_name char(20),
+Car_color char(10),
+Capacity int,
+Daily_Rent int,
+Car_Status char(10) default 'AVAILABLE',
+Rent_ID int default NULL
+);
+
+
+insert into cars values(1101,'SUV','chevrolet 420','WHITE',5,1700,'AVAILABLE',NULL);
+insert into cars values(1102,'SUV','MAHINDRA gemini','GREY',7,1500,'AVAILABLE',NULL);
+insert into cars values(1103,'SUV','TOYOTA unFORTUNate','BLACK',7,1900,'AVAILABLE',NULL);
+insert into cars values(1104,'SUV','MG HECTOR salamanca','RED',5,2000,'AVAILABLE',NULL);
+insert into cars values(1201,'SEDAN','HONDA town','RED',5,900,'AVAILABLE',NULL);
+insert into cars values(1202,'SEDAN','HYUNDAI VERma','WHITE',6,950,'AVAILABLE',NULL);
+insert into cars values(1203,'SEDAN','SKODA ludacris','GREY',5,1000,'AVAILABLE',NULL);
+insert into cars values(1204,'SEDAN','NISSAN windy','GREY',5,850,'AVAILABLE',NULL);
+insert into cars values(1301,'LUXURY','RANGE mars ROVER','WHITE',4,4000,'AVAILABLE',NULL);
+insert into cars values(1302,'LUXURY','AUDI lf','BLACK',2,3500,'AVAILABLE',NULL);
+insert into cars values(1303,'LUXURY','baugette car','BLACK',7,6000,'AVAILABLE',NULL);
+insert into cars values(1304,'LUXURY','Benz Patent-Motorwagen','WHITE',4,4500,'AVAILABLE',NULL);
+insert into cars values(1401,'SPORTS','PORSCHE 911 ','WHITE',2,4800,'AVAILABLE',NULL);
+insert into cars values(1402,'SPORTS','JAGUAR F','BLACK',2,4700,'AVAILABLE',NULL);
+insert into cars values(1403,'SPORTS','NISSAN dragon ball GT-R','BLACK',2,4300,'AVAILABLE',NULL);
+insert into cars values(1404,'SPORTS','BUGGATI','SILVER',2,5000,'AVAILABLE',NULL);
